@@ -29,6 +29,8 @@ public abstract class ProtectionCompatibility {
      */
     public abstract boolean canBreak(Player player, Location target);
 
+    public abstract boolean canInteract(Player player, Location target);
+
     public Plugin getMainPlugin() {
         return mainPlugin;
     }

@@ -42,4 +42,10 @@ public class FactionsUuidCompat extends ProtectionCompatibility {
         return board.getFactionAt(new FLocation(target))
                 .hasAccess(fPlayers.getByPlayer(player), PermissibleAction.DESTROY);
     }
+
+    @Override
+    public boolean canInteract(Player player, Location target) {
+        return board.getFactionAt(new FLocation(target))
+                .hasAccess(fPlayers.getByPlayer(player), PermissibleAction.CONTAINER);
+    }
 }

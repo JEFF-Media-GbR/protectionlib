@@ -39,4 +39,10 @@ public class LandsCompat extends ProtectionCompatibility {
         return land == null || land.getTrustedPlayers().stream().anyMatch(playerUUID -> playerUUID.equals(player.getUniqueId()));
     }
 
+    @Override
+    public boolean canInteract(Player player, Location target) {
+        Land land = landsIntegration.getLand(target);
+        return land == null || land.getTrustedPlayers().stream().anyMatch(playerUUID -> playerUUID.equals(player.getUniqueId()));
+    }
+
 }
